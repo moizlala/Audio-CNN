@@ -67,7 +67,7 @@ const ESC50_EMOJI_MAP: Record<string, string> = {
 };
 
 const getEmojiForClass = (className: string): string => {
-  return ESC50_EMOJI_MAP[className] || "🔈";
+  return ESC50_EMOJI_MAP[className] ?? "🔈";
 };
 
 
