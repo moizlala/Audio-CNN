@@ -93,4 +93,8 @@ After training, the model weights are saved (e.g., in `src/model/saved/`). You c
 
 ---
 
+## Deployment
+
+The app is deployed at: [https://audio-classfier.vercel.app/](https://audio-classfier.vercel.app/)
+
 For more details, see the source files in the `src/` directory.
