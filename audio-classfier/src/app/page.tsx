@@ -93,15 +93,15 @@ interface waveformData {
 
 interface ApiResponse {
   predictions: Prediction[];
-  visualization: VisualizationData;
+  visualizations: VisualizationData;
   input_spectrogram: LayerData;
   waveform: waveformData;
 }
 
-function splitLayers (visualization: VisualizationData){
+function splitLayers (visualizations: VisualizationData){
   const main:[string, LayerData][] = [];
   const internals: Record<string,[string, LayerData][]> = {};
-  for (const [name, data] of  Object.entries(visualization)){
+  for (const [name, data] of  Object.entries(visualizations)){
     if(!name.includes(".")){
       main.push([name, data]);
     } else{
@@ -173,8 +173,8 @@ export default function HomePage() {
   }
 
  const { main, internals } =
-  vizData && vizData.visualization
-    ? splitLayers(vizData.visualization)
+  vizData && vizData.visualizations
+    ? splitLayers(vizData.visualizations)
     : { main: [], internals: {} };
 
   return (

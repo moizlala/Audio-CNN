@@ -120,7 +120,7 @@ class AudioClassifier:
         
         response = {
             "predictions": predictions,
-            "visualization": viz_data,
+            "visualizations": viz_data,
             "input_spectrogram": {
                 "shape": list(clean_spectrogram.shape),
                 "values": clean_spectrogram.tolist()
